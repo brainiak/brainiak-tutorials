@@ -1,0 +1,11 @@
+# To be ignored
+.DS_Store
+.ipynb_checkpoints
+__MACOSX
+__pycache__
+*.swp
+tutorials/logs/*
+tutorials/__pycache__
+
+# To be excepted
+!tutorials/logs/.gitkeep
