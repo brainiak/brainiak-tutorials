@@ -4,7 +4,7 @@
 CONDA_ENV=mybrainiak
 
 # How are you interacting with the notebooks? On a cluster, locally on a laptop, using docker, etc.? This will determine how some functions are launched, such as jupyter and some jobs
-configuration='cluster' # includes 'cluster' or 'local' or 'docker'
+configuration='server' # includes 'cluster' or 'local' or 'docker'
 
 # Also setup the environment to use some simple visualization tools, like FSL
 #module load FSL
