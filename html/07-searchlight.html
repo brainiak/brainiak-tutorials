@@ -9129,15 +9129,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -12519,7 +12519,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13018,7 +13018,7 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -13072,14 +13072,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13213,14 +13213,14 @@ So remember, the two main things that determine the speed of a searchlight: the 
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
-<span class="kn">import</span> <span class="nn">sys</span> 
+<span class="kn">import</span> <span class="nn">sys</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">sys</span><span class="o">.</span><span class="n">warnoptions</span><span class="p">:</span>
     <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
-    
+
 <span class="c1"># Import libraries</span>
 <span class="kn">import</span> <span class="nn">nibabel</span> <span class="k">as</span> <span class="nn">nib</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">os</span> 
+<span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">from</span> <span class="nn">nilearn</span> <span class="k">import</span> <span class="n">plotting</span>
 <span class="kn">from</span> <span class="nn">brainiak.searchlight.searchlight</span> <span class="k">import</span> <span class="n">Searchlight</span>
@@ -13234,7 +13234,7 @@ So remember, the two main things that determine the speed of a searchlight: the 
 <span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="k">import</span> <span class="n">SVC</span>
 
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span> 
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 
 <span class="c1"># Set printing precision</span>
 <span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -13302,7 +13302,7 @@ IPython.notebook.set_autosave_interval(5000)
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">utils</span> <span class="k">import</span> <span class="n">fs_data_dir</span><span class="p">,</span> <span class="n">results_path</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;data dir = </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">fs_data_dir</span><span class="p">))</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;data dir = </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">fs_data_dir</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13338,8 +13338,8 @@ IPython.notebook.set_autosave_interval(5000)
     <span class="c1"># Set paths</span>
     <span class="n">suffix</span> <span class="o">=</span> <span class="s1">&#39;bet.nii.gz&#39;</span>
     <span class="n">wb_mask_file</span> <span class="o">=</span>  <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">fs_data_dir</span><span class="p">,</span> <span class="s1">&#39;mask.nii.gz&#39;</span><span class="p">)</span> <span class="c1"># whole brain mask</span>
-    <span class="n">fs_epoch_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">fs_data_dir</span><span class="p">,</span> <span class="s1">&#39;fs_epoch_labels.npy&#39;</span><span class="p">)</span>    
-    
+    <span class="n">fs_epoch_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">fs_data_dir</span><span class="p">,</span> <span class="s1">&#39;fs_epoch_labels.npy&#39;</span><span class="p">)</span>
+
     <span class="c1"># Create an image object that can be efficiently used by the data loader.</span>
     <span class="n">images</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">load_images_from_dir</span><span class="p">(</span><span class="n">fs_data_dir</span><span class="p">,</span> <span class="n">suffix</span><span class="p">)</span>
     <span class="n">image_files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">fs_data_dir</span><span class="p">)</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;*&quot;</span> <span class="o">+</span> <span class="n">suffix</span><span class="p">))</span>
@@ -13358,16 +13358,16 @@ IPython.notebook.set_autosave_interval(5000)
     <span class="n">whole_brain_mask</span> <span class="o">=</span> <span class="n">nib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">wb_mask_file</span><span class="p">)</span>
     <span class="n">whole_brain_mask</span> <span class="o">=</span> <span class="n">whole_brain_mask</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
     <span class="n">coords</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">whole_brain_mask</span><span class="p">)</span>  <span class="c1"># Where are the non zero values</span>
-    
+
     <span class="c1"># copy the whole brain mask</span>
     <span class="n">copyfile</span><span class="p">(</span><span class="n">wb_mask_file</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="s1">&#39;wb_mask.nii.gz&#39;</span><span class="p">))</span>
-    
+
     <span class="k">for</span> <span class="n">sub_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">18</span><span class="p">):</span>
         <span class="n">sub</span> <span class="o">=</span> <span class="s1">&#39;sub-</span><span class="si">%.2d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">sub_id</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
         <span class="c1"># extract affine</span>
         <span class="n">nii</span> <span class="o">=</span> <span class="n">nib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">image_files</span><span class="p">[</span><span class="n">sub_id</span><span class="p">]))</span>
         <span class="n">affine_mat</span> <span class="o">=</span> <span class="n">nii</span><span class="o">.</span><span class="n">affine</span>  <span class="c1"># What is the orientation of the data</span>
-        <span class="n">dimsize</span> <span class="o">=</span> <span class="p">(</span><span class="mf">3.5</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> 
+        <span class="n">dimsize</span> <span class="o">=</span> <span class="p">(</span><span class="mf">3.5</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
         <span class="c1"># extract data for this subject</span>
         <span class="n">data_i</span> <span class="o">=</span> <span class="n">bold_data_raw</span><span class="p">[:,:,:,</span><span class="mi">12</span><span class="o">*</span><span class="n">sub_id</span><span class="p">:</span><span class="mi">12</span><span class="o">*</span><span class="p">(</span><span class="n">sub_id</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
         <span class="n">label_i</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="mi">12</span><span class="o">*</span><span class="n">sub_id</span><span class="p">:</span><span class="mi">12</span><span class="o">*</span><span class="p">(</span><span class="n">sub_id</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
@@ -13379,7 +13379,7 @@ IPython.notebook.set_autosave_interval(5000)
         <span class="n">bold_nii</span> <span class="o">=</span> <span class="n">nib</span><span class="o">.</span><span class="n">Nifti1Image</span><span class="p">(</span><span class="n">data_i</span><span class="p">,</span> <span class="n">affine_mat</span><span class="p">)</span>
         <span class="n">hdr</span> <span class="o">=</span> <span class="n">bold_nii</span><span class="o">.</span><span class="n">header</span>  <span class="c1"># get a handle for the .nii file&#39;s header</span>
         <span class="n">hdr</span><span class="o">.</span><span class="n">set_zooms</span><span class="p">((</span><span class="n">dimsize</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dimsize</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dimsize</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">dimsize</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>
-        <span class="n">nib</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">bold_nii</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">output_name</span><span class="p">))</span> 
+        <span class="n">nib</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">bold_nii</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">output_name</span><span class="p">))</span>
         <span class="n">np</span><span class="o">.</span><span class="n">savez_compressed</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s1">&#39;label.npz&#39;</span><span class="p">),</span><span class="n">label</span><span class="o">=</span><span class="n">label_i</span><span class="p">)</span>
 </pre></div>
 
@@ -13399,7 +13399,7 @@ IPython.notebook.set_autosave_interval(5000)
     <span class="n">sub</span> <span class="o">=</span> <span class="s1">&#39;sub-</span><span class="si">%.2d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">sub_id</span><span class="p">)</span>
     <span class="n">input_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">sub</span><span class="p">)</span>
     <span class="n">data_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">input_dir</span><span class="p">,</span> <span class="s1">&#39;data.nii.gz&#39;</span><span class="p">)</span>
-    <span class="n">label_file</span> <span class="o">=</span>  <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">input_dir</span><span class="p">,</span> <span class="s1">&#39;label.npz&#39;</span><span class="p">)</span> 
+    <span class="n">label_file</span> <span class="o">=</span>  <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">input_dir</span><span class="p">,</span> <span class="s1">&#39;label.npz&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">mask</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
         <span class="n">mask_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="s1">&#39;wb_mask.nii.gz&#39;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
@@ -13409,8 +13409,8 @@ IPython.notebook.set_autosave_interval(5000)
     <span class="n">data_file</span> <span class="o">=</span> <span class="n">nib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
     <span class="n">bold_data</span> <span class="o">=</span> <span class="n">data_file</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
     <span class="n">affine_mat</span> <span class="o">=</span> <span class="n">data_file</span><span class="o">.</span><span class="n">affine</span>
-    <span class="n">dimsize</span> <span class="o">=</span> <span class="n">data_file</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">get_zooms</span><span class="p">()</span> 
-    
+    <span class="n">dimsize</span> <span class="o">=</span> <span class="n">data_file</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">get_zooms</span><span class="p">()</span>
+
     <span class="c1"># load label</span>
     <span class="n">label</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">label_file</span><span class="p">)</span>
     <span class="n">label</span> <span class="o">=</span> <span class="n">label</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span>
@@ -13468,7 +13468,7 @@ Just like a whiteboard is wiped regularly, scratch storage is erased after 60 da
 <span class="n">data_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">scratch_folder</span> <span class="o">+</span> <span class="s1">&#39;/searchlight_data&#39;</span><span class="p">)</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">data_path</span><span class="p">):</span>
     <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">data_path</span><span class="p">)</span>
-    
+
 <span class="c1"># Make directory to save results</span>
 <span class="n">output_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">scratch_folder</span> <span class="o">+</span> <span class="s1">&#39;/searchlight_results&#39;</span><span class="p">)</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">output_dir</span><span class="p">):</span>
@@ -13751,11 +13751,11 @@ Input mask shape: (64, 64, 26)
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Set up the kernel, in this case an SVM</span>
 <span class="k">def</span> <span class="nf">calc_svm</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">sl_mask</span><span class="p">,</span> <span class="n">myrad</span><span class="p">,</span> <span class="n">bcvar</span><span class="p">):</span>
-    
+
     <span class="c1"># Pull out the data</span>
     <span class="n">data4D</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">labels</span> <span class="o">=</span> <span class="n">bcvar</span>
-    
+
     <span class="n">bolddata_sl</span> <span class="o">=</span> <span class="n">data4D</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">sl_mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">sl_mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">sl_mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
 
     <span class="c1"># Check if the number of voxels is what you expect.</span>
@@ -13763,15 +13763,15 @@ Input mask shape: (64, 64, 26)
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Searchlight data shape after reshaping: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">bolddata_sl</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Searchlight mask shape:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sl_mask</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Searchlight mask (note that the center equals 1):</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sl_mask</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-    
+
     <span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="n">clf</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">bolddata_sl</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
     <span class="n">accuracy</span> <span class="o">=</span> <span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
     <span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-    
+
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Kernel duration: </span><span class="si">%.2f</span><span class="se">\n\n</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">))</span>
-    
+
     <span class="k">return</span> <span class="n">accuracy</span>
 </pre></div>
 
@@ -14073,10 +14073,10 @@ Total searchlight duration (including start up time): 0.13
         <span class="c1"># Pull out the data</span>
         <span class="n">data4D</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
         <span class="n">labels</span> <span class="o">=</span> <span class="n">bcvar</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
-        <span class="n">bolddata_sl</span> <span class="o">=</span> <span class="n">data4D</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">sl_mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">sl_mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">sl_mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>        
+        <span class="n">bolddata_sl</span> <span class="o">=</span> <span class="n">data4D</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">sl_mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">sl_mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">sl_mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
         <span class="n">clf</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
         <span class="n">scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">bolddata_sl</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-        <span class="n">accuracy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>   
+        <span class="n">accuracy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
     <span class="k">return</span> <span class="n">accuracy</span>
 
 <span class="c1"># Execute searchlight on 3 subjects</span>
@@ -14191,20 +14191,20 @@ Total searchlight duration (including start up time): 0.59
 End Searchlight
 
 Total searchlight duration (including start up time): 0.27
-Accuracy for each kernel function from one subject: 
+Accuracy for each kernel function from one subject:
 [0.67 0.58 0.5  0.42 0.5  0.25 0.42 0.5  0.58 0.33 0.17 0.5  0.33 0.5
  0.42 0.33 0.67 0.75 0.67 0.5  0.67 0.58 0.58 0.58 0.5  0.5  0.25 0.67
  0.5  0.33 0.25 0.5  0.5  0.42 0.75 0.67 0.33 0.42 0.42 0.5  0.5  0.5
  0.33 0.58 0.58 0.58 0.33 0.67 0.42 0.5  0.58 0.67 0.42 0.58 0.5  0.67
  0.5  0.5  0.58 0.75 0.58 0.58 0.42 0.58]
 
-Accuracy for each kernel function from 3 subjects: 
+Accuracy for each kernel function from 3 subjects:
 [0.67 0.58 0.5  0.42 0.5  0.25 0.42 0.5  0.58 0.33 0.17 0.5  0.33 0.5
  0.42 0.33 0.67 0.75 0.67 0.5  0.67 0.58 0.58 0.58 0.5  0.5  0.25 0.67
  0.5  0.33 0.25 0.5  0.5  0.42 0.75 0.67 0.33 0.42 0.42 0.5  0.5  0.5
  0.33 0.58 0.58 0.58 0.33 0.67 0.42 0.5  0.58 0.67 0.42 0.58 0.5  0.67
  0.5  0.5  0.58 0.75 0.58 0.58 0.42 0.58]
-Are the two arrays close: 
+Are the two arrays close:
 True
 
 Shape of the accuracy array: (64, 64, 26)
@@ -14256,7 +14256,7 @@ One element of the accuracy array: [0.42 0.5  0.58]
 
 #SBATCH --output=../logs/searchlight-%j.out
 #SBATCH --job-name searchlight
-#SBATCH -t 30        # time limit: how many minutes 
+#SBATCH -t 30        # time limit: how many minutes
 #SBATCH -m=4G        # memory limit
 #SBATCH -n 2         # how many cores to use
 
@@ -14290,10 +14290,10 @@ fi
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="2.1-Distributing-jobs-with-parallel-computing">2.1 Distributing jobs with parallel computing<a name="ranks" /><a class="anchor-link" href="#2.1-Distributing-jobs-with-parallel-computing">&#182;</a></h2><p>When you parallelize an analysis across multiple cores, this typically means that each core will run the code independently (though there are ways for cores to communicate directly with each other). This means you will load in all of the data on each core. The searchlight function then notices that there are multiple cores running the same job and assigns different pieces of the data to each core for analysis. The message passing interface (MPI), the parallelizing framework used by BrainIAK and most high-performance computing applications, keeps track of each process by assigning it a rank, starting at 0. We provide a brief overview of ranks, cores, and nodes below.</p>
-<p><img src="imgs/lab7/nodes_process.jpg" width="300" height="300"/></p>
+<p><img src="../tutorials/imgs/lab7/nodes_process.jpg" width="300" height="300"/></p>
 <p>What is a rank? It is a process generated by the application that you are running. In the above figure "Process 1" can be considered to be rank=0 and "Process 2" rank=1. A rank can use more than one core on the cluster and is managed by MPI. Each rank also uses a part of the memory allocated. The cores and memory are part of the hardware belonging to a "node". A node is akin to a server. When you submit a job, you are requesting use of part of the node, or sometimes even the entire node. <strong>Optimizing the memory, and number of cores for your batch job will lead to significant gains in run-time for your programs</strong>.</p>
 <p>MPI handles all communication between the ranks (or processes). This can occur within a single node, or if you have asked for lots of resources, this can even span multiple nodes. Each process can spawn multiple threads, and Open-MP handles communication between threads.</p>
-<p><img src="imgs/lab7/mpi_openmp.jpg" width="300" height="300"/></p>
+<p><img src="../tutorials/imgs/lab7/mpi_openmp.jpg" width="300" height="300"/></p>
 <p><strong>You do not need to configure any of the above. BrainIAK handles all the parallelization for you.</strong> Just make sure that you have requested the appropriate number of cores and the memory for your job.</p>
 
 </div>
@@ -14367,13 +14367,13 @@ run searchlight</code></pre>
 <span class="n">sl</span><span class="o">.</span><span class="n">broadcast</span><span class="p">(</span><span class="n">bcvar</span><span class="p">)</span>
 
 <span class="c1"># Set up the kernel, in this case an SVM</span>
-<span class="k">def</span> <span class="nf">calc_svm</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">sl_mask</span><span class="p">,</span> <span class="n">myrad</span><span class="p">,</span> <span class="n">bcvar</span><span class="p">):</span>  
+<span class="k">def</span> <span class="nf">calc_svm</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">sl_mask</span><span class="p">,</span> <span class="n">myrad</span><span class="p">,</span> <span class="n">bcvar</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">sl_mask</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">14</span><span class="p">:</span>
         <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
     <span class="c1"># Pull out the data</span>
     <span class="n">data4D</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">labels</span> <span class="o">=</span> <span class="n">bcvar</span>    
-    <span class="n">bolddata_sl</span> <span class="o">=</span> <span class="n">data4D</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">sl_mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">sl_mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">sl_mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>    
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">bcvar</span>
+    <span class="n">bolddata_sl</span> <span class="o">=</span> <span class="n">data4D</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">sl_mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">sl_mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">sl_mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
     <span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
     <span class="n">scores</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="c1"># outer loop</span>
@@ -14382,7 +14382,7 @@ run searchlight</code></pre>
         <span class="n">train_data</span> <span class="o">=</span> <span class="n">bolddata_sl</span><span class="p">[</span><span class="n">train</span><span class="p">,</span> <span class="p">:]</span>
         <span class="n">test_data</span> <span class="o">=</span> <span class="n">bolddata_sl</span><span class="p">[</span><span class="n">test</span><span class="p">,</span> <span class="p">:]</span>
         <span class="n">train_label</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="n">train</span><span class="p">]</span>
-        <span class="n">test_label</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="n">test</span><span class="p">]</span>     
+        <span class="n">test_label</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="n">test</span><span class="p">]</span>
         <span class="c1"># inner loop</span>
         <span class="n">sp_train</span> <span class="o">=</span> <span class="n">StratifiedKFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
         <span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">]}</span>
@@ -14393,14 +14393,14 @@ run searchlight</code></pre>
             <span class="n">return_train_score</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="n">inner_clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_data</span><span class="p">,</span> <span class="n">train_label</span><span class="p">)</span>
         <span class="c1"># best C from inner loop</span>
-        <span class="n">C_best</span> <span class="o">=</span> <span class="n">inner_clf</span><span class="o">.</span><span class="n">best_params_</span><span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">]</span> 
+        <span class="n">C_best</span> <span class="o">=</span> <span class="n">inner_clf</span><span class="o">.</span><span class="n">best_params_</span><span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">]</span>
         <span class="c1"># Train in outer loop</span>
         <span class="n">clf</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="n">C_best</span><span class="p">)</span>
         <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_data</span><span class="p">,</span> <span class="n">train_label</span><span class="p">)</span>
         <span class="c1"># Test in outer loop</span>
         <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">test_data</span><span class="p">,</span> <span class="n">test_label</span><span class="p">))</span>
     <span class="n">accuracy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
-    <span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>    
+    <span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 <span class="c1">#     print(&#39;Kernel duration: &#39; + str(t2 - t1) + &quot;\n\n&quot;)</span>
     <span class="k">return</span> <span class="n">accuracy</span>
 
@@ -14526,7 +14526,7 @@ C. Ellis implemented updates from cmhn-s19</p>
   </div>
 </body>
 
- 
+
 
 
 </html>
