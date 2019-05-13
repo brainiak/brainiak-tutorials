@@ -9129,15 +9129,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -12519,7 +12519,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13018,7 +13018,7 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -13072,14 +13072,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13122,9 +13122,9 @@ div#notebook {
 <p>SRM can be summarized graphically as follows (from <a href="https://www.nature.com/articles/nn.4499">Cohen et al., 2017</a>):<img src="https://media.springernature.com/m685/nature-assets/neuro/journal/v20/n3/images/nn.4499-F4.jpg" alt="image"></p>
 <p>SRM requires that each participant be exposed to the same sequence of stimulus events. For this reason, continuous movies or stories are often used, although datasets (e.g., block-design localizers) where the trials are in the same order across participants have also been used with SRM. If counterbalancing was used between participants, it is technically possible to still perform SRM by rearranging the data, although mileage may vary. For best results, the epochs that are counterbalanced ought to be long (e.g., &gt;30s). It is also important to note that SRM needs a lot of training data, up to 400 TRs or more for stable performance.</p>
 <h2 id="Goal-of-this-script">Goal of this script<a class="anchor-link" href="#Goal-of-this-script">&#182;</a></h2>
-<pre><code>1. Learn how to fit SRM.  
-2. Use SRM to match a movie time segment.  
-3. Use SRM to classify other datasets.  
+<pre><code>1. Learn how to fit SRM.
+2. Use SRM to match a movie time segment.
+3. Use SRM to classify other datasets.
 
 
 </code></pre>
@@ -13156,10 +13156,10 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
-<span class="kn">import</span> <span class="nn">sys</span> 
+<span class="kn">import</span> <span class="nn">sys</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">sys</span><span class="o">.</span><span class="n">warnoptions</span><span class="p">:</span>
     <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
-<span class="kn">import</span> <span class="nn">os</span> 
+<span class="kn">import</span> <span class="nn">os</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="k">import</span> <span class="n">stats</span>
@@ -13292,7 +13292,7 @@ IPython.notebook.set_autosave_interval(5000)
 <span class="n">movie_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">raider_data_dir</span><span class="p">,</span> <span class="s1">&#39;movie.npy&#39;</span><span class="p">))</span>
 
 <span class="c1"># Pull out the shape data</span>
-<span class="n">vox_num</span><span class="p">,</span> <span class="n">nTR</span><span class="p">,</span> <span class="n">num_subs</span> <span class="o">=</span> <span class="n">movie_data</span><span class="o">.</span><span class="n">shape</span>  
+<span class="n">vox_num</span><span class="p">,</span> <span class="n">nTR</span><span class="p">,</span> <span class="n">num_subs</span> <span class="o">=</span> <span class="n">movie_data</span><span class="o">.</span><span class="n">shape</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Participants &#39;</span><span class="p">,</span> <span class="n">num_subs</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Voxels per participant &#39;</span><span class="p">,</span> <span class="n">vox_num</span><span class="p">)</span>
@@ -13355,9 +13355,9 @@ TRs per participant  2203
     <span class="c1"># Take the first half of TRs as training</span>
     <span class="c1"># *The double dash means integer division</span>
     <span class="n">train_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">movie_data</span><span class="p">[:,</span> <span class="p">:</span><span class="n">nTR</span><span class="o">//</span><span class="mi">2</span><span class="p">,</span> <span class="n">sub</span><span class="p">])</span>
-    
+
     <span class="c1"># Take the second half of TRs as testing</span>
-    <span class="n">test_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">movie_data</span><span class="p">[:,</span> <span class="o">-</span><span class="p">(</span><span class="n">nTR</span><span class="o">//</span><span class="mi">2</span><span class="p">):,</span> <span class="n">sub</span><span class="p">])</span>  
+    <span class="n">test_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">movie_data</span><span class="p">[:,</span> <span class="o">-</span><span class="p">(</span><span class="n">nTR</span><span class="o">//</span><span class="mi">2</span><span class="p">):,</span> <span class="n">sub</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -13379,12 +13379,12 @@ TRs per participant  2203
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Iterate through the subjects</span>
-<span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_subs</span><span class="p">):</span>    
-    
+<span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_subs</span><span class="p">):</span>
+
     <span class="c1"># Do it for training data</span>
     <span class="n">train_data</span><span class="p">[</span><span class="n">sub</span><span class="p">]</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">zscore</span><span class="p">(</span><span class="n">train_data</span><span class="p">[</span><span class="n">sub</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">train_data</span><span class="p">[</span><span class="n">sub</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">train_data</span><span class="p">[</span><span class="n">sub</span><span class="p">])</span>
-    
+
     <span class="c1"># Do it for test data</span>
     <span class="n">test_data</span><span class="p">[</span><span class="n">sub</span><span class="p">]</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">zscore</span><span class="p">(</span><span class="n">test_data</span><span class="p">[</span><span class="n">sub</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">test_data</span><span class="p">[</span><span class="n">sub</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">test_data</span><span class="p">[</span><span class="n">sub</span><span class="p">])</span>
@@ -13659,7 +13659,7 @@ SRM has been fit
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">srm</span><span class="o">.</span><span class="n">w_</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">,:])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">srm</span><span class="o">.</span><span class="n">w_</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">,:])</span>
 <span class="n">feature_corr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">srm</span><span class="o">.</span><span class="n">w_</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">,:],</span> <span class="n">srm</span><span class="o">.</span><span class="n">w_</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">,:]</span><span class="o">.</span><span class="n">T</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;SRM: Weights x Features for one voxel (correlation of loading, r: </span><span class="si">%0.3f</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="n">feature_corr</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;SRM: Weights x Features for one voxel (correlation of loading, r: </span><span class="si">%0.3f</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="n">feature_corr</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;feature&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;weight for one voxel&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
@@ -13743,16 +13743,16 @@ SRM has been fit
 <span class="n">raw_obj</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">train_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">train_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">train_data</span><span class="p">)))</span>
 <span class="k">for</span> <span class="n">ppt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">train_data</span><span class="p">)):</span>
     <span class="n">raw_obj</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ppt</span><span class="p">]</span> <span class="o">=</span> <span class="n">train_data</span><span class="p">[</span><span class="n">ppt</span><span class="p">]</span>
-    
+
 <span class="c1"># Perform ISC on all participants, collapsing across participants    </span>
 <span class="n">corr_raw</span> <span class="o">=</span> <span class="n">isc</span><span class="p">(</span><span class="n">raw_obj</span><span class="p">)</span>
-<span class="n">corr_raw</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">corr_raw</span><span class="p">)</span>  
+<span class="n">corr_raw</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">corr_raw</span><span class="p">)</span>
 
 <span class="c1"># Reorganize the SRM transformed data back into an appropriate space for ISC</span>
 <span class="n">shared_obj</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">shared_train</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">shared_train</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">train_data</span><span class="p">)))</span>
 <span class="k">for</span> <span class="n">ppt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">train_data</span><span class="p">)):</span>
     <span class="n">shared_obj</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ppt</span><span class="p">]</span> <span class="o">=</span> <span class="n">shared_train</span><span class="p">[</span><span class="n">ppt</span><span class="p">]</span>
-    
+
 <span class="c1"># Perform ISC on all participants, collapsing across participants        </span>
 <span class="n">corr_shared</span> <span class="o">=</span> <span class="n">isc</span><span class="p">(</span><span class="n">shared_obj</span><span class="p">)</span>
 <span class="n">corr_shared</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">corr_shared</span><span class="p">)</span>
@@ -14082,7 +14082,7 @@ SRM has been fit
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="5.-Time-segment-matching">5. Time-segment matching<a id="time_seg" /><a class="anchor-link" href="#5.-Time-segment-matching">&#182;</a></h2><p>One of the tests that has been used to quantify the benefits of SRM is <em>time-segment matching</em>. This test involves taking an isolated, unknown segment of fMRI data from a held-out subject and trying to determine <em>when in the movie</em> the segment occurred, by comparing the segment to the whole fMRI time series acquired from other subjects. If you have a 30s "mystery" segment of data from a held-out subject, you could compare it to all 30s segments of group data from the whole movie and see which one has the highest neural similarity. For example, if the mystery segment matches best to the segment taken from 1:00 to 1:30 of the movie and that is actual time period during which the mystery segment of fMRI data was acquired, the match would be correct.</p>
 <p>The full process is shown in the figure below. The left part shows how to learn W and test on the held-out subject. Their data are transformed into the shared space by fixing $S$ and learning a mapping $W_m$ into this space. That is, the test subject does not impact the fitting of the shared responses but their data can still be projected into this space. The right part shows the algorithm used to determine the best-matching segment (here, a max-correlation classifier). Note that the classifier computes the match to the correct segment and all segments that do not overlap in time with the correct segment. Segments that overlap with the correct segment are excluded on the grounds that it would be difficult to distinguish segments that closely overlap in time.</p>
-<p><img src="./imgs/lab11/srm_time_segment_matching.png" alt="image"></p>
+<p><img src="../tutorials/imgs/lab11/srm_time_segment_matching.png" alt="image"></p>
 <p>The intuition behind time-segment matching is that, if the fMRI time series are well-aligned across participants and different parts of the movie have unique fMRI signatures, it should be possible to identify the mystery segment by comparing that segment to properly-timestamped fMRI time series from other participants. One might expect SRM to boost time-segment-matching accuracy, compared to anatomically aligned voxel space, by increasing the consistency of neural patterns across subjects.</p>
 <p>The following sequence of steps is used to perform time-segment matching:</p>
 <blockquote><ul>
@@ -14106,15 +14106,15 @@ SRM has been fit
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Take in a list of participants of voxel by TR data. Also specify how big the time segment is to be matched</span>
-<span class="k">def</span> <span class="nf">time_segment_matching</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">win_size</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span> 
+<span class="k">def</span> <span class="nf">time_segment_matching</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">win_size</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
     <span class="n">nsubjs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="p">(</span><span class="n">ndim</span><span class="p">,</span> <span class="n">nsample</span><span class="p">)</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
     <span class="n">accu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">nsubjs</span><span class="p">)</span>
-    <span class="n">nseg</span> <span class="o">=</span> <span class="n">nsample</span> <span class="o">-</span> <span class="n">win_size</span> 
-    
+    <span class="n">nseg</span> <span class="o">=</span> <span class="n">nsample</span> <span class="o">-</span> <span class="n">win_size</span>
+
     <span class="c1"># mysseg prediction</span>
     <span class="n">trn_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">ndim</span><span class="o">*</span><span class="n">win_size</span><span class="p">,</span> <span class="n">nseg</span><span class="p">),</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
-    
+
     <span class="c1"># the training data also include the test data, but will be subtracted when calculating A</span>
     <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nsubjs</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">win_size</span><span class="p">):</span>
@@ -14141,7 +14141,7 @@ SRM has been fit
 
         <span class="c1"># Print accuracy</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy for subj </span><span class="si">%d</span><span class="s2"> is: </span><span class="si">%0.4f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">tst_subj</span><span class="p">,</span> <span class="n">accu</span><span class="p">[</span><span class="n">tst_subj</span><span class="p">]</span> <span class="p">))</span>
-        
+
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The average accuracy among all subjects is </span><span class="si">{0:f}</span><span class="s2"> +/- </span><span class="si">{1:f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">accu</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">accu</span><span class="p">)))</span>
     <span class="k">return</span> <span class="n">accu</span>
 </pre></div>
@@ -14285,10 +14285,10 @@ The average accuracy among all subjects is 0.134464 +/- 0.044484
 
     <span class="c1"># Figure out how many TRs there for this proportion</span>
     <span class="n">num_split</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">nTR</span> <span class="o">*</span> <span class="n">prop_split</span><span class="p">)</span>
-    
+
     <span class="c1"># Get the training and test data and Zscore both of them</span>
-    
-    
+
+
     <span class="c1"># Create the SRM object</span>
 
 
@@ -14302,8 +14302,8 @@ The average accuracy among all subjects is 0.134464 +/- 0.044484
 
 
     <span class="c1"># Run time segment matching</span>
-    
-    
+
+
     <span class="c1"># Append results of time segment matching to the list</span>
 </pre></div>
 
@@ -14351,17 +14351,17 @@ The average accuracy among all subjects is 0.134464 +/- 0.044484
 <span class="sd">    ----------</span>
 <span class="sd">    fnames_ [list]: file names for all subjs</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">c_</span> <span class="o">=</span> <span class="mi">0</span> 
+    <span class="n">c_</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">fnames_</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="c1"># collect all file names </span>
-    <span class="k">for</span> <span class="n">subj</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_subjs</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span> 
+    <span class="k">for</span> <span class="n">subj</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_subjs</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
         <span class="n">fname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
             <span class="n">data_dir_</span><span class="p">,</span> <span class="s1">&#39;sub-</span><span class="si">%.3d</span><span class="s1">/func/sub-</span><span class="si">%.3d</span><span class="s1">-task-</span><span class="si">%s</span><span class="s1">.nii.gz&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">subj</span><span class="p">,</span> <span class="n">subj</span><span class="p">,</span> <span class="n">task_name_</span><span class="p">))</span>
         <span class="c1"># if the file exists</span>
         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
             <span class="c1"># add to the list of file names </span>
             <span class="n">fnames_</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span> 
+            <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
                 <span class="nb">print</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
             <span class="n">c_</span><span class="o">+=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">fnames_</span>
@@ -14378,15 +14378,15 @@ The average accuracy among all subjects is 0.134464 +/- 0.044484
 <span class="n">pieman_train</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">pieman_test</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_subjs</span><span class="p">):</span>
-    
+
     <span class="c1"># Load and mask this participant&#39;s data</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">nib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">fnames</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
     <span class="n">masked_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">A1_mask</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
-    
+
     <span class="n">pieman_train</span> <span class="o">+=</span> <span class="p">[</span><span class="n">masked_data</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">200</span><span class="p">]]</span>
     <span class="n">pieman_test</span> <span class="o">+=</span> <span class="p">[</span><span class="n">masked_data</span><span class="p">[:,</span> <span class="mi">200</span><span class="p">:]]</span>
-    
-    
+
+
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Finished loading in Pieman data&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -14460,13 +14460,13 @@ The average accuracy among all subjects is 0.134464 +/- 0.044484
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Run a leave-one-out cross validation with the subjects</span>
 <span class="k">def</span> <span class="nf">image_class_prediction</span><span class="p">(</span><span class="n">image_data_shared</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
-    
+
     <span class="n">subjects</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">image_data_shared</span><span class="p">)</span>
     <span class="n">train_labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">subjects</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">test_labels</span> <span class="o">=</span> <span class="n">labels</span>
     <span class="n">accuracy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">subjects</span><span class="p">,))</span>
     <span class="k">for</span> <span class="n">subject</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">subjects</span><span class="p">):</span>
-        
+
         <span class="c1"># Concatenate the subjects&#39; data for training into one matrix</span>
         <span class="n">train_subjects</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">subjects</span><span class="p">))</span>
         <span class="n">train_subjects</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">subject</span><span class="p">)</span>
@@ -14486,7 +14486,7 @@ The average accuracy among all subjects is 0.134464 +/- 0.044484
         <span class="n">accuracy</span><span class="p">[</span><span class="n">subject</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">predicted_labels</span> <span class="o">==</span> <span class="n">test_labels</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">predicted_labels</span><span class="p">)</span>
         <span class="c1"># Print accuracy</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy for subj </span><span class="si">%d</span><span class="s2"> is: </span><span class="si">%0.4f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">subject</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">[</span><span class="n">subject</span><span class="p">]</span> <span class="p">))</span>
-        
+
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The average accuracy among all subjects is </span><span class="si">{0:f}</span><span class="s2"> +/- </span><span class="si">{1:f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">accuracy</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">accuracy</span><span class="p">)))</span>
     <span class="k">return</span> <span class="n">accuracy</span>
 </pre></div>
@@ -14521,18 +14521,18 @@ The average accuracy among all subjects is 0.134464 +/- 0.044484
 <span class="n">train_data</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">test_data</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">sub</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_subs</span><span class="p">):</span>
-    <span class="n">train_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">movie_data</span><span class="p">[:,:,</span><span class="n">sub</span><span class="p">])</span>  
-    <span class="n">test_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">image_data</span><span class="p">[:,:,</span><span class="n">sub</span><span class="p">])</span>  
+    <span class="n">train_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">movie_data</span><span class="p">[:,:,</span><span class="n">sub</span><span class="p">])</span>
+    <span class="n">test_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">image_data</span><span class="p">[:,:,</span><span class="n">sub</span><span class="p">])</span>
 <span class="k">del</span> <span class="n">movie_data</span><span class="p">,</span> <span class="n">image_data</span>
 
 <span class="c1"># Zscore training and testing data</span>
 
-    
+
 <span class="c1"># Create the SRM object</span>
 
 
 <span class="c1"># Fit the SRM data</span>
-   
+
 
 <span class="c1"># Transform the test data into the shared space using the individual weight matrices</span>
 
@@ -14599,7 +14599,7 @@ C. Ellis incorporated edits from cmhn-s19.</p>
   </div>
 </body>
 
- 
+
 
 
 </html>
