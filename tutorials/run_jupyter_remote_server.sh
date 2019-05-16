@@ -5,14 +5,14 @@ ipnip=$(hostname -i)
 server=$(hostname)
 
 echo -e "
-    This is your ssh key:
+    Copy/Paste this in your local terminal to ssh tunnel with remote
     -----------------------------------------------------------------
     ssh -N -L $ipnport:$ipnip:$ipnport $USER@${server}
     -----------------------------------------------------------------
 
-    This is your url:
+    Then open a browser on your local machine to the following address
     ------------------------------------------------------------------
-    localhost:$ipnport
+    localhost:$ipnport    (prefix w/ https:// if using password)
     ------------------------------------------------------------------
     "
 

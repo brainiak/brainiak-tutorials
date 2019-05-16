@@ -14,9 +14,9 @@ server=$(hostname)
 
 if [[ -n $CONDA_ENV ]]; then
     # Start the conda environment
-    conda --version  &> /dev/null
+    conda activate  &> /dev/null
     if [[ $? -eq 0 ]]; then
-        # conda command is present
+        # conda activate command is present
         conda activate $CONDA_ENV
     else
         # older versions of conda use source activate instead
