@@ -30,7 +30,7 @@ RUN apt-get update && apt-get install -y \
     libssl-dev
 
 WORKDIR /mnt
-RUN git clone https://github.com/brainiak/brainiak
+COPY brainiak brainiak
 WORKDIR /mnt/brainiak
 
 COPY tutorials tutorials
