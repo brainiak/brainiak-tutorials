@@ -50,7 +50,7 @@ TAG=$(date +%Y%m%d)-0-$TUTORIALS_HASH-$BRAINIAK_HASH
 echo "Creating new docker image with tag" brainiak/tutorials:$TAG
 
 docker build -t brainiak/tutorials:$TAG .
-docker push brainiak/tutorials:TAG
+docker push brainiak/tutorials:$TAG
 
-docker tag brainiak/tutorials:TAG brainiak/tutorials:latest
+docker tag brainiak/tutorials:$TAG brainiak/tutorials:latest
 docker push brainiak/tutorials:latest
