@@ -1,5 +1,7 @@
 #!/bin/bash -i
 
+source ~/.bashrc
+
 # Setup the environment
 source setup_environment.sh
 
