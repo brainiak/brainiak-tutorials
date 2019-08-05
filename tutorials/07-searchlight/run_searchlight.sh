@@ -4,7 +4,7 @@
 #SBATCH --output=../logs/searchlight-%j.out
 #SBATCH --job-name searchlight
 #SBATCH -t 30        # time limit: how many minutes 
-#SBATCH -m=4G        # memory limit
+#SBATCH --mem=4G        # memory limit
 #SBATCH -n 2         # how many cores to use
 
 # Set up the environment
