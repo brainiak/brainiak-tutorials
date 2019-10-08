@@ -8,3 +8,4 @@ nxviz
 pandas
 seaborn
 watchdog
+niwidgets
