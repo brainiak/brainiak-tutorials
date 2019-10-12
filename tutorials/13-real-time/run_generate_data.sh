@@ -1,16 +1,22 @@
-#!/bin/bash -i
+#!/bin/bash
 # Input python command to be submitted as a job
 
-#SBATCH --output=../generate_data-%j.out
+#SBATCH --output=generate_data-%j.out
 #SBATCH --job-name generate_data
 #SBATCH -t 30
-#SBATCH -m=4G
+#SBATCH --mem=4G
 #SBATCH -n 1
 
-MY_DIR=$(dirname "$0")
+# Check you are in the correct directory
+if [ ${PWD##*/} == '13-real-time' ]
+then
+	cd ..
+	echo "Changing to the tutorials directory"
+fi
+
 
 # Set up the environment
-source $MY_DIR/../setup_environment.sh
+source ./setup_environment.sh
 
 # Run the python script
-python $MY_DIR/generate_data.py
+python ./13-real-time/generate_data.py

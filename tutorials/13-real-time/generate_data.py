@@ -10,7 +10,7 @@ import nibabel  # type: ignore
 import numpy as np  # type: ignore
 from brainiak.utils import fmrisim as sim  # type: ignore
 import sys
-sys.path.append("..")
+sys.path.append(os.getcwd())
 import utils
 
 # Template input directory
