@@ -10,9 +10,10 @@ from sklearn.svm import SVC
 from scipy.spatial.distance import euclidean
 import os
 import pickle 
+from utils import results_path
 
 # Import additional libraries you need
-fs_data_dir = os.path.expanduser('~/searchlight_data')
+fs_data_dir = os.path.expanduser(results_path + '/searchlight_data')
 
 num_subj = 3
 
@@ -51,7 +52,7 @@ def load_fs_label(sub_id, mask=''):
     return label
     
 # Data Path
-data_path = os.path.expanduser('~/searchlight_results')
+data_path = os.path.expanduser(results_path + '/searchlight_results')
 # if not os.path.exists(data_path):
 #     os.makedirs(data_path)
 
