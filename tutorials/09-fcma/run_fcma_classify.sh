@@ -28,7 +28,5 @@ if [ $configuration == "cluster" ]
 then
 	srun --mpi=pmi2 python ./fcma_classify.py $data_dir $suffix $mask_file $epoch_file $left_out_subj $second_mask
 else
-	echo Cannot run python ./fcma_classify.py $data_dir $suffix $mask_file $epoch_file $left_out_subj $second_mask
-	echo Must have two cores in order to setup master and worker control
-	echo Try running this on a cluster
+	mpirun -np 2 python ./fcma_classify.py $data_dir $suffix $mask_file $epoch_file $left_out_subj $second_mask
 fi
